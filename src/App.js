@@ -1,26 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+// import Keyboard from './components/Keyboard/Keyboard';
+import Game from './components/Game/Game';
+// import Row from './components/Row/Row';
+// import {getSecretWord} from './store/actions/game/game';
 
-function App() {
+
+const App = (props) => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <h1 className="title">HANGMAN GAME</h1>
+      <h3>GUESS CRYPTO CURRENCY NAME</h3>
+      <Game />
     </div>
   );
 }
+
 
 export default App;

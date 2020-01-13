@@ -1,0 +1,10 @@
+.secretWord {
+	display: flex;
+}
+
+.letters {
+	font: bold;
+	text-transform: uppercase;
+	font-size: 64px;
+	margin: 6px;
+}

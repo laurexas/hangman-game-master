@@ -1,0 +1,18 @@
+.hangman-container {
+	width: 50%;
+}
+
+.hangman {
+	width: 600px;
+	height: 600px;
+}
+.base {
+	fill: none;
+	stroke: black;
+	stroke-width: 10;
+}
+.character {
+	fill: none;
+	stroke: black;
+	stroke-width: 3;
+}
