@@ -3,6 +3,7 @@ import './index.css';
 import Hangman from '../Hangman/Hangman';
 import Stats from '../Stats/Stats';
 import axios from 'axios';
+import Loader from '../Loader/Loader';
 
 const Game = () => {
     const fetchData = async () => {
@@ -24,7 +25,7 @@ const Game = () => {
     const winner = items.map(item => item).includes('_');
     const loading = secretWord === '' ? true : false;
    
-  
+    if(loading) {return <Loader loading={true} />}
 
     const handleClick = (letter) => {
         const newState = new Set(guessedLetters);
@@ -46,9 +47,7 @@ const Game = () => {
     return (
         <div className="container">
            <Hangman mistakes={mistakes}/>
-            {loading ? <p style={{fontSize: '25px'}}>Loading... </p> : 
-            <Stats onClick={() => handleReset()} winner={winner} lifes={lifes} secretWord={secretWord} guessedLetters={guessedLetters} gameFinished={gameFinished} handleClick={handleClick} items={items}/>
-            } 
+           <Stats onClick={() => handleReset()} winner={winner} lifes={lifes} secretWord={secretWord} guessedLetters={guessedLetters} gameFinished={gameFinished} handleClick={handleClick} items={items}/>
         </div>
     )
 }

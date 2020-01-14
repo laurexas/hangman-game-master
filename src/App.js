@@ -1,9 +1,7 @@
 import React from 'react';
 import './App.css'
-// import Keyboard from './components/Keyboard/Keyboard';
 import Game from './components/Game/Game';
-// import Row from './components/Row/Row';
-// import {getSecretWord} from './store/actions/game/game';
+
 
 
 const App = (props) => {
